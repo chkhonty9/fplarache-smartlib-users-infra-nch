@@ -59,7 +59,7 @@ resource "aws_ecs_service" "app_service" {
     container_port   = 80  
   }
 
-  health_check_grace_period_seconds = 5
+  health_check_grace_period_seconds = 4
   
   enable_ecs_managed_tags = true
 }
