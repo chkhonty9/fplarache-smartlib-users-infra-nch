@@ -20,7 +20,15 @@ resource "aws_ecs_task_definition" "app_task" {
             "image": "${aws_ecr_repository.app_repo.repository_url}:latest",
             "essential": true,
             "memory": 512,
-            "cpu": 256 
+            "cpu": 256 ,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                    "appProtocol": "http"
+                }
+            ]
         }
     ]
     DEFINITION
