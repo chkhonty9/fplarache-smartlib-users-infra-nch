@@ -3,19 +3,19 @@ variable "aws_region" {
 }  
 
 variable "ecr_repository_name" {  
-  default = "dev-fplarache-smartlib-users-repo-NCh"  
+  default = "dev-fplarache-smartlib-users-nch-repo"  
 }  
 
 variable "ecs_cluster_name" {  
-  default = "dev-fplarache-smartlib-users-fgcluster-NCh"  
+  default = "dev-fplarache-smartlib-users-fgcluster-nch"  
 }  
 
 variable "ecs_task_family" {  
-  default = "dev-fplarache-smartlib-users-td-NCh"  
+  default = "dev-fplarache-smartlib-users-td-nch"  
 }  
 
 variable "ecs_service_name" {  
-  default = "dev-fplarache-smartlib-users-service-NCh"  
+  default = "dev-fplarache-smartlib-users-service-nch"  
 }  
 
 variable "subnet_ids" {  
