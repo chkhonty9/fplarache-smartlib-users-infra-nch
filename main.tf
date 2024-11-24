@@ -29,7 +29,7 @@ resource "aws_ecs_task_definition" "app_task" {
     memory = "512"
     cpu = "256"
     #execution_role_arn = aws_iam_role.ecs_task_execution.arn
-    execution_role_arn = "arn:aws:iam::your-account-id:role/ecsTaskExecutionRole"
+    execution_role_arn = "arn:aws:iam::774305596814:role/ecsTaskExecutionRole"
 }
 
 resource "aws_ecs_service" "app_service" {
