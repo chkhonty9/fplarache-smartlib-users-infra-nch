@@ -54,7 +54,6 @@ resource "aws_ecs_service" "app_service" {
   health_check_grace_period_seconds = 5
   
   enable_ecs_managed_tags = true
-  depends_on = [aws_lb_target_group.app_target_group]
 }
 
 # resource "aws_iam_role" "ecs_task_execution" {  
