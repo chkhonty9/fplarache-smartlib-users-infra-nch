@@ -21,3 +21,11 @@ variable "ecs_service_name" {
 variable "subnet_ids" {  
   type = list(string)  
 }
+
+variable "target_group_arn" {
+  type = string
+}
+
+variable "groups_security_ids" {  
+  type = list(string)  
+}

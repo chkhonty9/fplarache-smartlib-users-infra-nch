@@ -40,9 +40,20 @@ resource "aws_ecs_service" "app_service" {
   network_configuration {
     subnets = var.subnet_ids
     assign_public_ip = true
+    security_groups = var.groups_security_ids
   }
 
   desired_count = 1
+
+  load_balancer {
+    target_group_arn = var.target_group_arn
+    container_name   = "dev-smartlib-users-container"
+    container_port   = 80  
+  }
+
+  health_check_grace_period_seconds = 5
+  
+  enable_ecs_managed_tags = true
 }
 
 # resource "aws_iam_role" "ecs_task_execution" {  
